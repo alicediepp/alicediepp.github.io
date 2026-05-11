@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f8f5ef;
+  color: #2f2f2f;
+  line-height: 1.65;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 35px;
+}
+
+header {
+  border-bottom: 1px solid #cfc7bb;
+  margin-bottom: 35px;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.subtitle {
+  color: #6d6258;
+  margin-top: 6px;
+}
+
+nav {
+  margin-top: 18px;
+  margin-bottom: 15px;
+}
+
+nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #8a3f2d;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  gap: 45px;
+}
+
+.content {
+  flex: 3;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+section {
+  margin-bottom: 38px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: normal;
+  border-bottom: 1px solid #d8d0c4;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #5a3328;
+}
+
+a {
+  color: #8a3f2d;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #8a3f2d;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.button:hover {
+  background: #8a3f2d;
+  color: white;
+}
+
+.profile-img {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #cfc7bb;
+  margin-bottom: 25px;
+}
+
+.card {
+  border-top: 1px solid #d8d0c4;
+  padding-top: 15px;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.project-tabs {
+  margin-bottom: 20px;
+}
+
+.project-tabs a {
+  display: inline-block;
+  margin: 5px 6px 5px 0;
+  padding: 6px 10px;
+  border: 1px solid #c9b7a9;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  background: #fffaf4;
+}
+
+.project-tabs a:hover {
+  background: #eaded3;
+}
+
+.project-card {
+  background: #fffaf4;
+  border: 1px solid #ded2c5;
+  padding: 18px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+}
+
+footer {
+  border-top: 1px solid #cfc7bb;
+  margin-top: 40px;
+  padding-top: 15px;
+  color: #6d6258;
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+}

@@ -1,325 +1,605 @@
+```css
+/* =========================================
+   NGOC DIEP (ALICE) WEBSITE STYLESHEET
+   Warm Academic Burgundy Theme
+========================================= */
+
 :root {
-  --bg: #f7f1e8;
+
+  /* Colors */
+
+  --bg: #f6efe7;
   --paper: #fffaf4;
-  --paper-soft: #fbf1e7;
+  --paper-soft: #fbf3ea;
+
   --text: #2f2925;
-  --muted: #74685f;
-  --border: #d8c8b8;
+  --muted: #76695f;
+
+  --border: #dccdbf;
 
   --burgundy: #7a1f2b;
-  --burgundy-dark: #4b111a;
-  --burgundy-soft: #a84d58;
+  --burgundy-dark: #4e111c;
+  --burgundy-soft: #a24a56;
+
+  --shadow:
+    0 8px 24px rgba(80, 40, 30, 0.06);
+
 }
 
-/* Base */
+/* =========================================
+   Base
+========================================= */
 
 body {
+
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  background: var(--bg);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
   color: var(--text);
-  line-height: 1.7;
+
+  line-height: 1.75;
+
+  background-color: var(--bg);
+
+  /* cute subtle texture */
+
+  background-image:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(122, 31, 43, 0.05) 0 2px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(162, 74, 86, 0.04) 0 2px,
+      transparent 2px
+    ),
+
+    radial-gradient(
+      circle at 40% 80%,
+      rgba(122, 31, 43, 0.04) 0 1.5px,
+      transparent 1.5px
+    );
+
+  background-size:
+    120px 120px,
+    160px 160px,
+    100px 100px;
 }
+
+/* decorative details */
+
+body::before {
+
+  content: "✦";
+
+  position: fixed;
+
+  top: 18px;
+  right: 28px;
+
+  font-size: 28px;
+
+  color: rgba(122, 31, 43, 0.14);
+
+  pointer-events: none;
+}
+
+body::after {
+
+  content: "❀";
+
+  position: fixed;
+
+  bottom: 18px;
+  left: 28px;
+
+  font-size: 30px;
+
+  color: rgba(122, 31, 43, 0.12);
+
+  pointer-events: none;
+}
+
+/* =========================================
+   Layout
+========================================= */
 
 .container {
+
   max-width: 1120px;
+
   margin: 0 auto;
-  padding: 45px 35px;
+
+  padding:
+    46px
+    34px;
 }
-
-/* Header */
-
-header {
-  margin-bottom: 42px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-}
-
-h1 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: normal;
-  letter-spacing: 0.02em;
-}
-
-h1 a {
-  color: var(--burgundy-dark);
-  text-decoration: none;
-}
-
-.subtitle {
-  margin: 8px 0 22px 0;
-  max-width: 760px;
-  color: var(--muted);
-  font-size: 16px;
-  font-style: italic;
-}
-
-/* Navigation */
-
-nav {
-  padding-top: 14px;
-  border-top: 1px solid var(--border);
-}
-
-nav a {
-  margin-right: 24px;
-  color: var(--burgundy);
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-nav a:hover {
-  color: var(--burgundy-dark);
-  border-bottom: 1px solid var(--burgundy-dark);
-}
-
-/* Layout */
 
 main {
+
   display: flex;
-  gap: 48px;
+
+  gap: 54px;
+
   align-items: flex-start;
 }
 
 .content {
+
   flex: 3;
+
   background: var(--paper);
-  border: 1px solid var(--border);
-  padding: 36px;
-  box-shadow: 0 8px 24px rgba(90, 45, 35, 0.06);
+
+  border:
+    1px solid var(--border);
+
+  padding: 38px;
+
+  box-shadow: var(--shadow);
 }
 
 .sidebar {
+
   flex: 1;
 }
 
-/* Typography */
+/* =========================================
+   Header
+========================================= */
+
+header {
+
+  margin-bottom: 44px;
+
+  padding-bottom: 18px;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+h1 {
+
+  margin: 0;
+
+  font-size: 50px;
+
+  font-weight: normal;
+
+  letter-spacing: 0.02em;
+}
+
+h1 a {
+
+  color: var(--burgundy-dark);
+
+  text-decoration: none;
+}
+
+h1 a:hover {
+
+  color: var(--burgundy);
+}
+
+.subtitle {
+
+  margin:
+    8px 0 22px 0;
+
+  max-width: 780px;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  font-style: italic;
+}
+
+/* =========================================
+   Navigation
+========================================= */
+
+nav {
+
+  padding-top: 14px;
+
+  border-top:
+    1px solid var(--border);
+}
+
+nav a {
+
+  margin-right: 24px;
+
+  text-decoration: none;
+
+  color: var(--burgundy);
+
+  font-size: 14px;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+nav a:hover {
+
+  color: var(--burgundy-dark);
+
+  border-bottom:
+    1px solid var(--burgundy-dark);
+}
+
+/* =========================================
+   Typography
+========================================= */
 
 h2 {
+
   margin-top: 0;
+
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
+
+  border-bottom:
+    1px solid var(--border);
+
   color: var(--burgundy-dark);
+
   font-size: 34px;
+
   font-weight: normal;
 }
 
 h3 {
+
   margin-top: 34px;
+
   color: var(--burgundy);
+
   font-size: 22px;
+
   font-weight: normal;
 }
 
 h4 {
+
   font-weight: normal;
 }
 
 p {
+
   font-size: 17px;
 }
 
-a {
-  color: var(--burgundy);
-}
-
-a:hover {
-  color: var(--burgundy-dark);
-}
-
 ul {
+
   padding-left: 22px;
 }
 
 li {
+
   margin-bottom: 7px;
 }
 
-/* Sidebar */
+a {
+
+  color: var(--burgundy);
+}
+
+a:hover {
+
+  color: var(--burgundy-dark);
+}
+
+/* =========================================
+   Sidebar
+========================================= */
 
 .profile-img {
+
   width: 100%;
+
   border-radius: 6px;
-  border: 1px solid var(--border);
+
+  border:
+    1px solid var(--border);
+
   margin-bottom: 20px;
 }
 
 .card {
+
   background: var(--paper);
-  border: 1px solid var(--border);
+
+  border:
+    1px solid var(--border);
+
   padding: 18px;
+
   margin-bottom: 22px;
-  box-shadow: 0 6px 18px rgba(90, 45, 35, 0.04);
+
+  box-shadow:
+    0 6px 18px rgba(90, 45, 35, 0.04);
 }
 
 .card h3 {
+
   margin-top: 0;
 }
 
-/* Buttons */
+/* =========================================
+   Buttons
+========================================= */
 
 .button {
+
   display: inline-block;
-  padding: 9px 15px;
-  border: 1px solid var(--burgundy);
-  border-radius: 3px;
-  color: var(--burgundy);
+
+  padding:
+    10px 16px;
+
+  border:
+    1px solid var(--burgundy);
+
+  border-radius: 4px;
+
   text-decoration: none;
+
+  color: var(--burgundy);
+
+  transition: 0.2s ease;
 }
 
 .button:hover {
+
   background: var(--burgundy);
+
   color: white;
 }
 
-/* News */
+/* =========================================
+   News
+========================================= */
 
 .news-item {
-  margin-bottom: 22px;
+
+  margin-bottom: 24px;
+
   padding-left: 16px;
-  border-left: 3px solid var(--burgundy-soft);
+
+  border-left:
+    3px solid var(--burgundy-soft);
 }
 
 .news-date {
+
   color: var(--muted);
+
   font-size: 14px;
+
   font-style: italic;
 }
 
-/* Project cards */
+/* =========================================
+   Projects
+========================================= */
 
 .project-grid {
+
   display: grid;
+
   grid-template-columns: 1fr;
+
   gap: 18px;
 }
 
 .project-card {
+
   display: block;
-  padding: 20px;
+
   background: var(--paper-soft);
-  border: 1px solid var(--border);
+
+  border:
+    1px solid var(--border);
+
   border-radius: 6px;
-  color: inherit;
+
+  padding: 22px;
+
   text-decoration: none;
+
+  color: inherit;
+
   transition: 0.2s ease;
 }
 
 .project-card:hover {
+
   background: #f0e1d7;
+
   transform: translateY(-2px);
 }
 
 .project-card h3 {
+
   margin-top: 0;
 }
 
-/* Writing publication cards */
+/* =========================================
+   Writing publication cards
+========================================= */
 
 .publication-grid {
+
   display: flex;
+
   flex-direction: column;
-  gap: 22px;
+
+  gap: 24px;
+
   margin-top: 18px;
 }
 
 .publication-card {
+
   display: flex;
+
   gap: 22px;
+
   overflow: hidden;
+
   background: var(--paper-soft);
-  border: 1px solid var(--border);
-  border-radius: 7px;
-  color: inherit;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 8px;
+
   text-decoration: none;
+
+  color: inherit;
+
   transition: 0.2s ease;
 }
 
 .publication-card:hover {
+
   background: #f0e1d7;
+
   transform: translateY(-2px);
 }
 
 .publication-card img {
-  width: 245px;
-  height: 170px;
+
+  width: 250px;
+
+  height: 175px;
+
   object-fit: cover;
+
   flex-shrink: 0;
 }
 
 .publication-info {
-  padding: 20px 22px 20px 0;
+
+  padding:
+    20px
+    22px
+    20px
+    0;
 }
 
 .publication-source {
+
   color: var(--burgundy);
+
   font-size: 13px;
+
   letter-spacing: 0.08em;
+
   text-transform: uppercase;
 }
 
 .publication-info h4 {
-  margin: 8px 0 10px 0;
+
+  margin:
+    8px 0 10px 0;
+
   color: var(--burgundy-dark);
-  font-size: 25px;
+
+  font-size: 26px;
+
   line-height: 1.25;
 }
 
 .publication-info p {
+
   margin: 0;
+
   color: var(--muted);
+
   font-size: 15.5px;
 }
 
-/* Footer */
+/* =========================================
+   Footer
+========================================= */
 
 footer {
-  margin-top: 45px;
+
+  margin-top: 46px;
+
   padding-top: 18px;
-  border-top: 1px solid var(--border);
+
+  border-top:
+    1px solid var(--border);
+
   color: var(--muted);
+
   font-size: 14px;
 }
 
-/* Mobile */
+/* =========================================
+   Mobile
+========================================= */
 
 @media (max-width: 800px) {
+
   .container {
-    padding: 28px 20px;
+
+    padding:
+      28px
+      20px;
   }
 
   main {
+
     flex-direction: column;
   }
 
   h1 {
+
     font-size: 36px;
   }
 
   nav a {
+
     display: inline-block;
+
     margin-right: 14px;
+
     margin-bottom: 8px;
   }
 
   .content {
+
     padding: 24px;
   }
 
   .publication-card {
+
     flex-direction: column;
   }
 
   .publication-card img {
+
     width: 100%;
-    height: 210px;
+
+    height: 220px;
   }
 
   .publication-info {
-    padding: 0 18px 18px 18px;
+
+    padding:
+      0
+      18px
+      18px
+      18px;
   }
 }
-}
+```
